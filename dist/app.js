@@ -22169,9 +22169,7 @@
 	      'form',
 	      { onSubmit: onSubmit },
 	      _react2.default.createElement('input', { ref: function ref(node) {
-	          (function (input) {
-	            return node;
-	          });
+	          input = node;
 	        } }),
 	      _react2.default.createElement(
 	        'button',

@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import TodoList from '../components/Todolist'
+import { completeTodo } from '../actions'
 
 function getVisibleTodos(todos, filter) {
     switch(filter) {
@@ -17,6 +18,14 @@ function mapStateToProps(state) {
         state.todos, state.visibilityFilter) }
 }
 
-const VisibleTodoList = connect(mapStateToProps)(TodoList)
+function mapDispatchToProps(dispatch) {
+    return {
+        onTodoClick: (id) => {
+            dispatch(completeTodo(id))
+        }
+    }
+}
+
+const VisibleTodoList = connect(mapStateToProps,mapDispatchToProps)(TodoList)
 
 export default VisibleTodoList

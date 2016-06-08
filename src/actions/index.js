@@ -1,5 +1,7 @@
+let nextTodoid = 0
+
 export function addTodo(text) {
-    return {type: 'ADD_TODO', text}
+    return {type: 'ADD_TODO', id: nextTodoid++, text}
 }
 
 export function completeTodo(id) {

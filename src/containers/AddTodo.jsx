@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { addTodo, setVisibilityFilter } from '../actions'
 
 let AddTodo = ({dispatch}) => {
   let input
@@ -18,7 +18,7 @@ let AddTodo = ({dispatch}) => {
         <button type>Add todo</button>
       </form>  
     </div>
-  ) 
+  )
 }
 
 AddTodo = connect()(AddTodo)

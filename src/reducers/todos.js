@@ -4,7 +4,8 @@ function todos(state = [], action) {
        return [...state,
 	   {
 	       text: action.text,
-	       completed: false
+	       completed: false,
+           id: action.id
 	   }
        ]
     case 'COMPLETE_TODO':
@@ -13,7 +14,8 @@ function todos(state = [], action) {
 	    if (action.id == i) {
 		new_todos.push({
 		    text: state[i].text,
-		    completed: true
+		    completed: true,
+            id: action.id
 		})
 	    } else {
 		new_todos.push(state[i])

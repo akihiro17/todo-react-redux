@@ -7,16 +7,7 @@ import * as actions from './actions'
 import App from './components/App'
  
 const initialState = {
-    todos: [
-	{
-	    text: 'web db',
-	    completed: true
-	},
-	{
-	    text: 'software design',
-	    completed: false
-	}	
-    ],
+    todos: [],
     visibilityFilter: 'SHOW_ALL'
 }
 
