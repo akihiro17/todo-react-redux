@@ -1,9 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import {createStore, combineReducers} from 'redux'
+import { createStore } from 'redux'
 import todoApp from './reducers'
 import * as actions from './actions'
+import App from './components/App'
  
 const initialState = {
     todos: [
